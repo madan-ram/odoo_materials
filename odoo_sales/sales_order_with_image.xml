@@ -1,54 +1,5 @@
 <t t-name="sale.report_saleorder_document">
-    <t t-call="web.external_layout">
-        <!--<t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)"/>-->
-        <!--<t t-set="forced_vat" t-value="doc.fiscal_position_id.foreign_vat"/>-->
-        <!--<t t-set="address">-->
-        <!--    <div t-field="doc.partner_id" t-options="{'widget': 'contact', 'fields': ['address', 'name'], 'no_marker': True}"/>-->
-        <!--    <p t-if="doc.partner_id.vat">-->
-        <!--        <t t-if="doc.company_id.account_fiscal_country_id.vat_label" t-out="doc.company_id.account_fiscal_country_id.vat_label"/>-->
-        <!--        <t t-else="">Tax ID</t>: <span t-field="doc.partner_id.vat"/>-->
-        <!--    </p>-->
-        <!--</t>-->
-        
-        <!--<div class="row">-->
-            <!-- Invoicing and Shipping Details, Limited to Half Width -->
-        <!--    <div class="col-6">-->
-        <!--        <t t-if="doc.partner_shipping_id == doc.partner_invoice_id and doc.partner_invoice_id != doc.partner_id or doc.partner_shipping_id != doc.partner_invoice_id">-->
-        <!--            <t t-set="information_block">-->
-                        
-                        <!-- Display either Customer or Company Name -->
-        <!--                <strong>-->
-        <!--                    <t t-if="doc.partner_id.is_company">Company Name</t>-->
-        <!--                    <t t-else="">Customer Name</t>-->
-        <!--                </strong>-->
-        <!--                <div t-field="doc.partner_id.name"/>-->
-        
-                        <!-- Invoicing and Shipping Address Title -->
-        <!--                <strong>-->
-        <!--                    <t t-if="doc.partner_shipping_id == doc.partner_invoice_id">-->
-        <!--                        Invoicing and Shipping Address-->
-        <!--                    </t>-->
-        <!--                    <t t-else="">-->
-        <!--                        Invoicing Address-->
-        <!--                    </t>-->
-        <!--                </strong>-->
-                        
-                        <!-- Invoicing Address -->
-        <!--                <div t-field="doc.partner_invoice_id" -->
-        <!--                     t-options="{'widget': 'contact', 'fields': ['address', 'name', 'phone'], 'no_marker': True, 'phone_icons': True}"/>-->
-                        
-                        <!-- Shipping Address, Only if Different from Invoicing -->
-        <!--                <t t-if="doc.partner_shipping_id != doc.partner_invoice_id">-->
-        <!--                    <strong>Shipping Address</strong>-->
-        <!--                    <div t-field="doc.partner_shipping_id" -->
-        <!--                         t-options="{'widget': 'contact', 'fields': ['address', 'name', 'phone'], 'no_marker': True, 'phone_icons': True}"/>-->
-        <!--                </t>-->
-                        
-        <!--            </t>-->
-        <!--        </t>-->
-        <!--    </div>-->
-        <!--</div>-->
-        
+    <t t-call="web.external_layout">        
         
         <div t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)"/>
         <t t-set="forced_vat" t-value="doc.fiscal_position_id.foreign_vat"/>
